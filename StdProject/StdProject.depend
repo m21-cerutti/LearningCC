@@ -1,0 +1,79 @@
+# depslib dependency file v1.0
+1526854232 source:c:\users\marc\documents\1-travail\projet\c++\stdproject\src\main.cpp
+	<iostream>
+	<fstream>
+	"toolbox.h"
+	<cassert>
+
+1526852824 c:\users\marc\documents\1-travail\projet\c++\stdproject\include\toolbox.h
+	<iostream>
+	<fstream>
+	<cassert>
+	"my_utilities/my_convert.h"
+	"my_utilities/my_error.h"
+	"my_utilities/my_input.h"
+
+1526836601 c:\users\marc\documents\1-travail\projet\c++\stdproject\lib\myutilities\include\myutilities.h
+	<iostream>
+	<cassert>
+	"MyError.h"
+
+1526836635 c:\users\marc\documents\1-travail\projet\c++\stdproject\lib\myutilities\include\myerror.h
+	<iostream>
+	<exception>
+	<string>
+
+1526853550 source:c:\users\marc\documents\1-travail\projet\c++\stdproject\src\toolbox.cpp
+	"toolbox.h"
+	<iostream>
+	<fstream>
+
+1526836601 c:\users\marc\documents\1-travail\projet\c++\myutilities\include\myutilities.h
+	<iostream>
+	<cassert>
+	"MyError.h"
+
+1526836635 c:\users\marc\documents\1-travail\projet\c++\myutilities\include\myerror.h
+	<iostream>
+	<exception>
+	<string>
+
+1526836601 c:\users\marc\documents\1-travail\projet\c++\stdproject\include\myutilities.h
+	<iostream>
+	<cassert>
+	"MyError.h"
+
+1526836635 c:\users\marc\documents\1-travail\projet\c++\stdproject\include\myerror.h
+	<iostream>
+	<exception>
+	<string>
+
+1526846990 c:\users\marc\documents\1-travail\projet\c++\stdproject\include\myutilities\myerror.h
+	<iostream>
+	<exception>
+	<string>
+
+1526847496 c:\users\marc\documents\1-travail\projet\c++\stdproject\include\myutilities\myconvert.h
+	<iostream>
+	<cassert>
+	"MyUtilities\MyError.h"
+
+1526849233 c:\users\marc\documents\1-travail\projet\c++\stdproject\include\my_utilities\myconvert.h
+	<iostream>
+	<cassert>
+
+1526853512 c:\users\marc\documents\1-travail\projet\c++\stdproject\include\my_utilities\my_convert.h
+	<iostream>
+	<cassert>
+	"my_utilities/my_error.h"
+
+1526856878 c:\users\marc\documents\1-travail\projet\c++\stdproject\include\my_utilities\my_error.h
+	<iostream>
+	<exception>
+	<string>
+
+1526852532 c:\users\marc\documents\1-travail\projet\c++\stdproject\include\my_utilities\my_input.h
+	"my_utilities/my_convert.h"
+	<iostream>
+	<cassert>
+

@@ -1,0 +1,16 @@
+#include <windows.h>
+
+static void test_one_input_windows ( char c )
+{
+	keybd_event ( VkKeyScan ( c ), 0, 0, 0 );
+	keybd_event ( VkKeyScan ( c ), 0, KEYEVENTF_KEYUP, 0 );
+	Sleep ( 500 ); //wait 0.5 seconds
+}
+static void test_input_windows ( string in )
+{
+	for ( char c : in )
+	{
+		test_one_input_windows ( c );
+		cout << c;
+	}
+}

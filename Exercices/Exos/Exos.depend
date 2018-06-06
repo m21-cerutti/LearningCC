@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1527200539 source:c:\users\marc\documents\1-travail\projet\c++\exercices\exos\src\toolbox.cpp
+	"toolbox.h"
+	<iostream>
+	<fstream>
+	<iostream>
+	<fstream>
+	"toolbox.h"
+
+1528224379 c:\users\marc\documents\1-travail\projet\c++\exercices\exos\include\toolbox.h
+	<iostream>
+	<fstream>
+	<cassert>
+	"my_utilities/my_convert.h"
+	"my_utilities/my_error.h"
+	"my_utilities/my_input.h"
+	"my_utilities/my_file.h"
+
+1527200490 c:\users\marc\documents\1-travail\projet\c++\exercices\exos\include\my_utilities\my_convert.h
+	<iostream>
+	<cassert>
+	<math.h>
+	<cerrno>
+	<string>
+	"my_utilities/my_error.h"
+
+1528217106 c:\users\marc\documents\1-travail\projet\c++\exercices\exos\include\my_utilities\my_error.h
+	<iostream>
+	<exception>
+	<string>
+
+1527206816 c:\users\marc\documents\1-travail\projet\c++\exercices\exos\include\my_utilities\my_input.h
+	"my_utilities/my_convert.h"
+	<iostream>
+	<cassert>
+
+1528225348 source:c:\users\marc\documents\1-travail\projet\c++\exercices\exos\src\main.cpp
+	<iostream>
+	<fstream>
+	"toolbox.h"
+	<cassert>
+
+1528306277 c:\users\marc\documents\1-travail\projet\c++\exercices\exos\include\my_utilities\my_file.h
+	<math.h>
+	<cerrno>
+	<string>
+	<fstream>
+	"my_utilities/my_error.h"
+
