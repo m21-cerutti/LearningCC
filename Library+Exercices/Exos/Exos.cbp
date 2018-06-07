@@ -41,15 +41,13 @@
 			<Add option="-std=c++14" />
 			<Add option="-fexceptions" />
 			<Add directory="./include" />
+			<Add directory="../my_utilities/include" />
 		</Compiler>
 		<Linker>
-			<Add library="./lib/libmy_utilities.a" />
+			<Add library="../my_utilities/lib/libmy_utilities.a" />
 			<Add directory="./lib" />
+			<Add directory="../my_utilities/lib" />
 		</Linker>
-		<Unit filename="include/my_utilities/my_convert.h" />
-		<Unit filename="include/my_utilities/my_error.h" />
-		<Unit filename="include/my_utilities/my_file.h" />
-		<Unit filename="include/my_utilities/my_input.h" />
 		<Unit filename="include/toolbox.h" />
 		<Unit filename="src/main.cpp" />
 		<Unit filename="src/toolbox.cpp" />

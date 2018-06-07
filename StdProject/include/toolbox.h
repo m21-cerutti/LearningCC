@@ -11,6 +11,7 @@
 #include "my_utilities/my_convert.h"
 #include "my_utilities/my_error.h"
 #include "my_utilities/my_input.h"
+#include "my_utilities/my_file.h"
 
 using namespace std;
 
