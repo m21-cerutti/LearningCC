@@ -1,5 +1,0 @@
-Resume tests :                
-     Test 1 : writing into a file.                
-     Test 2 : writing into a file with append at end.                
-     Test 3 : writing into a file with append at end not in binary(no change for input like \r\n).                
-     Test 4 : writing into a file with append only.
