@@ -110,13 +110,11 @@ namespace myFile
 	template<typename T>
 	void save ( ofstream& out, T obj )
 	{
-		if ( out.is_open )
+		if ( out.is_open() )
 		{
 			out << obj <<endl;
 		}
-		else throw myError::Error ( myError::STREAM, __FILE__, __LINE__, "The stream given is not open." );
-
-        out.close();
+		else throw myError::Error ( myError::STREAM, __FILE__, __LINE__, "The stream given to write is not open." );
 
 		if ( ios::good )return;
 		else throw myError::Error ( myError::STREAM, __FILE__, __LINE__, "Fail to write in the stream given." );
@@ -130,8 +128,8 @@ namespace myFile
 	*   \param file String or Stream of the file to read.
 	*   \return the content of the file, if fail throw an error.
 	*/
-	string read ( string file );
-	string read ( char* file );
+	string read ( string file, bool del, bool binary );
+	string read ( char* file, bool del, bool binary );
 	string read ( ifstream& file );
 
 	/***********************************************/
