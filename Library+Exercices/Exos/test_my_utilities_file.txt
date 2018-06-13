@@ -1,8 +1,15 @@
 Resume tests :                
+Part I :                
+                
      Test 1 : writing into a file.                
      Test 1.1 : writing into a file with number 3000.                
      Test 1.2 : writing into a file with hex number 0xa = 10.                
      Test 2 : writing into a file with append at end.                
      Test 3 : writing into a file with append at end
 	not in binary(no change for input like \r\n).                
-     Test 4 : writing into a file with append only.
+     Test 4 : writing into a file with append only.                
+     Test 5 : delete test_my_utilities_file.test.                
+                
+Part I :                
+                
+     Test 1 : replace ":" by "\n".                

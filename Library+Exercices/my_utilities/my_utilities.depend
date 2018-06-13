@@ -1,41 +1,4 @@
 # depslib dependency file v1.0
-1527200789 source:c:\users\marc\documents\1-travail\projet\c++\my_utilities\src\my_convert.cpp
-	"my_utilities/my_convert.h"
-
-1527200490 c:\users\marc\documents\1-travail\projet\c++\my_utilities\include\my_utilities\my_convert.h
-	<iostream>
-	<cassert>
-	<math.h>
-	<cerrno>
-	<string>
-	"my_utilities/my_error.h"
-
-1528217106 c:\users\marc\documents\1-travail\projet\c++\my_utilities\include\my_utilities\my_error.h
-	<iostream>
-	<exception>
-	<string>
-
-1528224850 source:c:\users\marc\documents\1-travail\projet\c++\my_utilities\src\my_error.cpp
-	"my_utilities/my_error.h"
-
-1527206900 source:c:\users\marc\documents\1-travail\projet\c++\my_utilities\src\my_input.cpp
-	"my_utilities/my_input.h"
-
-1527206816 c:\users\marc\documents\1-travail\projet\c++\my_utilities\include\my_utilities\my_input.h
-	"my_utilities/my_convert.h"
-	<iostream>
-	<cassert>
-
-1528304843 source:c:\users\marc\documents\1-travail\projet\c++\my_utilities\src\my_file .cpp
-	"my_utilities/my_file.h"
-
-1528225640 c:\users\marc\documents\1-travail\projet\c++\my_utilities\include\my_utilities\my_file.h
-	<math.h>
-	<cerrno>
-	<string>
-	<fstream>
-	"my_utilities/my_error.h"
-
 1527200789 source:c:\users\marc\documents\1-travail\projet\c++\learningcc\library+exercices\my_utilities\src\my_convert.cpp
 	"my_utilities/my_convert.h"
 
@@ -55,16 +18,6 @@
 1528224850 source:c:\users\marc\documents\1-travail\projet\c++\learningcc\library+exercices\my_utilities\src\my_error.cpp
 	"my_utilities/my_error.h"
 
-1528827670 source:c:\users\marc\documents\1-travail\projet\c++\learningcc\library+exercices\my_utilities\src\my_file .cpp
-	"my_utilities/my_file.h"
-
-1528827070 c:\users\marc\documents\1-travail\projet\c++\learningcc\library+exercices\my_utilities\include\my_utilities\my_file.h
-	<math.h>
-	<cerrno>
-	<string>
-	<fstream>
-	"my_utilities/my_error.h"
-
 1527206900 source:c:\users\marc\documents\1-travail\projet\c++\learningcc\library+exercices\my_utilities\src\my_input.cpp
 	"my_utilities/my_input.h"
 
@@ -72,4 +25,14 @@
 	"my_utilities/my_convert.h"
 	<iostream>
 	<cassert>
+
+1528902447 source:c:\users\marc\documents\1-travail\projet\c++\learningcc\library+exercices\my_utilities\src\my_file .cpp
+	"my_utilities/my_file.h"
+
+1528902523 c:\users\marc\documents\1-travail\projet\c++\learningcc\library+exercices\my_utilities\include\my_utilities\my_file.h
+	<math.h>
+	<cerrno>
+	<string>
+	<fstream>
+	"my_utilities/my_error.h"
 

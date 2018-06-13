@@ -17,35 +17,39 @@ using namespace std;
 namespace myFile
 {
 
-	/**  \class ioFile
-	*    \brief Class for valid input/output stream
+	/**  \class inFile
+	*    \brief Class for valid input stream
 	*/
-	class ioFile
+	class inFile : public ifstream
 	{
 		public:
 
-			ioFile ( string file, bool app, bool ate, bool bin );
-			ioFile ( char* file,  bool app, bool ate, bool bin );
+			inFile ( string file );
+			inFile ( char* file );
 
-			~ioFile();
-
-			fstream& stream();
-			bool is_valid_iostream ();
+			~inFile();
 
 		private:
 
 			string filename;                //Fichier du stream
-			fstream p_stream;
 	};
 
-    /** \fn bool is_valid_stream(ofstream& stream);
-	*       bool is_valid_stream ( ifstream& stream );
-	*       bool is_valid_stream ( ioFile& stream );
-	*   \brief Function that check if it's a valid stream.
-	*   \param stream Stream to check.
-	*   \return true if sucess, false else.
+	/**  \class outFile
+	*    \brief Class for valid output stream
 	*/
-	bool is_valid_iostream (ioFile& stream);
+	class outFile : public ofstream
+	{
+		public:
+
+			outFile ( string file, bool app, bool ate, bool binary );
+			outFile ( char* file,  bool app, bool ate, bool binary );
+
+			~outFile();
+
+		private:
+
+			string filename;                //Fichier du stream
+	};
 
 
 	/***********************************************/
@@ -60,22 +64,8 @@ namespace myFile
 	template<typename T>
 	void save ( string file, T obj, bool app = false, bool ate = false, bool binary = false )
 	{
-		ofstream out;
-		ios_base::openmode mode{ofstream::out};
-
-		if ( app )mode = mode | ofstream::app;
-		else mode = mode | ofstream::trunc;
-		if ( ate )mode = mode | ofstream::ate;
-		if ( binary )mode = mode | ofstream::binary;
-
-		out.open ( file, mode );
-
-		if (out.is_open)
-		{
-			out << obj <<endl;
-		}
-		else throw myError::Error ( myError::STREAM, __FILE__, __LINE__, "Fail to open file \"" +  file + "\"." );
-
+		outFile out ( file, app, ate, binary );
+        out << obj << endl;
         out.close();
 
 		if ( ios::good )return;
@@ -85,22 +75,8 @@ namespace myFile
 	template<typename T>
 	void save ( char* file, T obj, bool app = false, bool ate = false, bool binary = false )
 	{
-		ofstream out;
-		ios_base::openmode mode{ofstream::out};
-
-		if ( app )mode = mode | ofstream::app;
-		else mode = mode | ofstream::trunc;
-		if ( ate )mode = mode | ofstream::ate;
-		if ( binary )mode = mode | ofstream::binary;
-
-		out.open ( file, mode );
-
-		if ( out.is_open() )
-		{
-			out << obj <<endl;
-		}
-		else throw myError::Error ( myError::STREAM, __FILE__, __LINE__, "Fail to open file \"" + string ( file ) + "\"." );
-
+		outFile out ( file, app, ate, binary );
+        out << obj << endl;
         out.close();
 
 		if ( ios::good )return;
@@ -112,7 +88,20 @@ namespace myFile
 	{
 		if ( out.is_open() )
 		{
-			out << obj <<endl;
+			out << obj << endl;
+		}
+		else throw myError::Error ( myError::STREAM, __FILE__, __LINE__, "The stream given to write is not open." );
+
+		if ( ios::good )return;
+		else throw myError::Error ( myError::STREAM, __FILE__, __LINE__, "Fail to write in the stream given." );
+	}
+
+	template<typename T>
+	void save ( outFile& out, T obj )
+	{
+		if ( out.is_open() )
+		{
+			out << obj << endl;
 		}
 		else throw myError::Error ( myError::STREAM, __FILE__, __LINE__, "The stream given to write is not open." );
 
@@ -122,15 +111,29 @@ namespace myFile
 
 	///Reading functions
 
-	/** \fn string read (string file);
-	*       string read (ofstream& file);
+	/** \fn string read ( string file, bool del, bool binary );
+    *       string read ( char* file, bool del, bool binary );
+    *       string read ( ifstream& file );;
 	*   \brief Function that return the content of the given file
-	*   \param file String or Stream of the file to read.
+	*   \param file String, Char* or Stream of the file to read.
 	*   \return the content of the file, if fail throw an error.
 	*/
 	string read ( string file, bool del, bool binary );
 	string read ( char* file, bool del, bool binary );
 	string read ( ifstream& file );
+	string read ( inFile& file );
+
+    /** \fn void replace_char (string file, char from, char to);
+    *       void replace_char (char* file, char from, char to);
+    *       void replace_char ( ifstream& file );
+	*   \brief Function that replace the character "from" to "to" of the given file
+	*   \param file String or Stream of the file to read.
+	*   \param from Char character to replace.
+	*   \param to Char the final character.
+	*   \return if fail throw an error.
+	*/
+    void replace_char (string file, char from, char to);
+    void replace_char (char* file, char from, char to);
 
 	/***********************************************/
 
